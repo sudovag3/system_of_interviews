@@ -8,7 +8,7 @@
 
 
 Инструкция по установке:
-1) git clone
+1) git clone -b master https://github.com/sudovag3/system_of_interviews.git
 2) pip install -r requirements.txt
 3) cd interview_system
 4) python manage.py migrate
