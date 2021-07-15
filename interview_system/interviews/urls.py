@@ -15,8 +15,6 @@ urlpatterns = [
     path('destroy/question', DestroyQuestionView.as_view()),
     path('destroy/interview', DestroyInterviewView.as_view()),
     path('destroy/option_of_answer', DestroyOptionOfAnswerView.as_view()),
-    #path('show/<str:ct_model>', ListView.as_view()),
-    # path('destroy/<str:ct_model>/<int:pk>', DestroyView.as_view()),
     path('open_interviews', ListInterviewView.as_view()),
     path('detail_interview', detail_interview),
     path('answer', send_answer),

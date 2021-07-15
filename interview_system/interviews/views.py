@@ -35,52 +35,45 @@ class CreateView(ParameterView, generics.CreateAPIView):
     Api view для создания моделей
     """
 
+
 class DestroyAnswerView(generics.DestroyAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = AnswerSerializer
 
 
 class DestroyInterviewView(generics.DestroyAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = InterviewSerializer
 
 
 class DestroyQuestionView(generics.DestroyAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = QuestionSerializer
 
 
 class DestroyOptionOfAnswerView(generics.DestroyAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = OptionOfAnswerSerializer
 
 
 class CreateAnswerView(generics.CreateAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = AnswerSerializer
 
 
 class CreateInterviewView(generics.CreateAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = InterviewSerializer
 
 
 class CreateQuestionView(generics.CreateAPIView):
+    # permission_classes = [IsAdminUser]
     serializer_class = QuestionSerializer
 
 
 class CreateOptionOfAnswerView(generics.CreateAPIView):
-    serializer_class = OptionOfAnswerSerializer
-
-
-class DestroyView(ParameterView, generics.DestroyAPIView):
     # permission_classes = [IsAdminUser]
-    """
-    Api view для удаления моделей
-    """
-
-    def get_serializer_class(self):
-
-        CreateModelSerializer.Meta.model = self._model
-        return CreateModelSerializer
-
-    def get_queryset(self):
-        queryset = self._model.objects.all()
-        return queryset
+    serializer_class = OptionOfAnswerSerializer
 
 
 class ListView(ParameterView, generics.ListAPIView):
